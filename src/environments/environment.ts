@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  bannerUrl: 'https://fast-lowlands-95849.herokuapp.com/api/common/getBanner',
 };
 
 /*
