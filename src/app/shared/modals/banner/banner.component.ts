@@ -11,6 +11,8 @@ export class BannerComponent implements OnInit {
 
   bannerData: any;
   closeBtnName!: string;
+  showCustomizePanel = false;
+  showAccordian = false;
   constructor(public bsModalRef: BsModalRef) { }
 
   ngOnInit(): void {
