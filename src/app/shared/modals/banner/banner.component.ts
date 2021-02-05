@@ -11,6 +11,8 @@ export class BannerComponent implements OnInit {
 
 
   bannerData!: Banner;
+  showSavingErrorMsg = false;
+  showSavingSuccessMsg = false;
   closeBtnName!: string;
   hideCustomizePanel = true;
   showAccordianIndex = -1;
@@ -64,9 +66,9 @@ export class BannerComponent implements OnInit {
     this.showAccordianIndex = -1;
     this.hideCustomizePanel = true;
     setTimeout(() => {
-      console.log('Settings saved: ', this.bannerData);
-      this.close();
+      this.showSavingSuccessMsg = true;
     }, 2000);
+    this.showSavingSuccessMsg = false;
   }
 
 }
