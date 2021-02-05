@@ -18,11 +18,11 @@
     }
 
     .thumb {
-        @apply transition-all duration-300 ease-in-out absolute top-0 left-0 w-3 h-3 bg-white border border-gray-300 rounded-full;
+        @apply transition-all duration-300 ease-in-out absolute top-0 left-0 w-3 h-3 bg-white border-2 border-gray-300 rounded-full;
     }
 
     input[type="checkbox"]:checked ~ .thumb {
-        @apply transform translate-x-full border border-green-100 bg-green-500;
+        @apply transform translate-x-full border border-green-100 bg-sp-green;
     }
 
     input[type="checkbox"]:checked ~ .track {
