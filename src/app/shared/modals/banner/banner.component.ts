@@ -39,9 +39,9 @@ export class BannerComponent implements OnInit {
     }
   }
 
-  allPluginsSelected(index: number): boolean {
+  pluginsSelected(index: number): boolean {
     const enabledPlugins = this.bannerData.accordian[index].PluginList.filter((plugin: Plugin) => plugin.BlockingEnabled);
-    return this.bannerData.accordian[index].PluginList.length === enabledPlugins.length;
+    return enabledPlugins.length > 0;
   }
 
   enableAllAccordianPlugins(event: any, index: number): void {

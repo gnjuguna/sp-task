@@ -9,6 +9,39 @@
 @import "tailwindcss/utilities";
 
 @layer components {
+    .switch {
+        @apply relative inline-block align-middle cursor-pointer select-none bg-transparent;
+    }
+
+    .track {
+        @apply w-6 h-3 bg-gray-300 rounded-full shadow-inner;
+    }
+
+    .thumb {
+        @apply transition-all duration-300 ease-in-out absolute top-0 left-0 w-3 h-3 bg-white border border-gray-300 rounded-full;
+    }
+
+    input[type="checkbox"]:checked ~ .thumb {
+        @apply transform translate-x-full border border-green-100 bg-green-500;
+    }
+
+    input[type="checkbox"]:checked ~ .track {
+        @apply transform transition-colors bg-green-100;
+    }
+
+    input[type="checkbox"]:disabled ~ .track {
+        @apply bg-gray-500;
+    }
+
+    input[type="checkbox"]:disabled ~ .thumb {
+        @apply bg-gray-100 border-gray-500;
+    }
+
+    input[type="checkbox"]:focus + .track,
+    input[type="checkbox"]:active + .track {
+        @apply shadow;
+    }
+
     app-banner,
     .modal-content,
     .modal-dialog {
