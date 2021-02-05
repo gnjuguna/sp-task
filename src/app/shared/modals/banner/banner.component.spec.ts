@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { BsModalRef } from 'ngx-bootstrap/modal';
 
 import { BannerComponent } from './banner.component';
 
@@ -8,9 +9,10 @@ describe('BannerComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BannerComponent ]
+      declarations: [BannerComponent],
+      providers: [BsModalRef]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

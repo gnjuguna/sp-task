@@ -10,7 +10,7 @@ import { Banner, Accordian, Plugin } from '../../models/banner.model';
 export class BannerComponent implements OnInit {
 
 
-  bannerData!: Banner;
+  bannerData: Banner = new Banner();
   showSavingErrorMsg = false;
   showSavingSuccessMsg = false;
   closeBtnName!: string;

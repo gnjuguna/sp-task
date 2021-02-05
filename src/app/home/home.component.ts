@@ -31,6 +31,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
       setTimeout(() => this.openModal(res), 2000);
 
+    }, (error: any) => {
+      console.log(error);
     });
   }
 
