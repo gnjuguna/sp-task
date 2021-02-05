@@ -35,7 +35,13 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
 
-  openModal(bannerData: Banner): any {
+  /**
+   * Function opens banner modal
+   * @param bannerData current banner data
+   * @returns return tvoid
+   */
+
+  openModal(bannerData: Banner): void {
     const initialState = {
       bannerData
     };

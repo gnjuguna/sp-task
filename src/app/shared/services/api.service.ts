@@ -10,6 +10,11 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
+  /**
+   * Function gets banner data from banner url
+   * @returns returns observable banner data
+   */
+
   getBanner(): any {
     return this.http.get(environment.bannerUrl);
   }

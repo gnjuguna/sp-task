@@ -24,6 +24,12 @@ export class BannerComponent implements OnInit {
     this.bsModalRef.hide();
   }
 
+  /**
+   * This hides/shows plugins accordions
+   * @param index Current accordion index
+   * @returns return true if accordions index = current index
+   */
+
   showAccordian(index: number): void {
     if (this.showAccordianIndex === index) {
       this.showAccordianIndex = -1;
@@ -32,6 +38,12 @@ export class BannerComponent implements OnInit {
     }
   }
 
+
+  /**
+   * This hides/shows cusomize panel
+   * @returns switches to true/false
+   */
+
   showCustomizePanel(): void {
     this.hideCustomizePanel = !this.hideCustomizePanel;
     if (!this.hideCustomizePanel) {
@@ -39,10 +51,23 @@ export class BannerComponent implements OnInit {
     }
   }
 
+  /**
+   * Function checks if any plugin is selected
+   * @param index Current plugin index
+   * @returns returns true if 1 or more plugins is selected
+   */
+
   pluginsSelected(index: number): boolean {
     const enabledPlugins = this.bannerData.accordian[index].PluginList.filter((plugin: Plugin) => plugin.BlockingEnabled);
     return enabledPlugins.length > 0;
   }
+
+  /**
+   * Function enables all accordion pluggins if selected
+   * @param event checkbox event
+   * @param event accordion index
+   * @returns checks all plugins to true/false based on the event target status
+   */
 
   enableAllAccordianPlugins(event: any, index: number): void {
     this.bannerData.accordian[index].PluginList.forEach((plugin: Plugin) => {
@@ -54,6 +79,12 @@ export class BannerComponent implements OnInit {
     });
   }
 
+
+  /**
+   * Function enables all plugins
+   * @returns checks all plugins to true
+   */
+
   enableAllPlugins(): void {
     this.bannerData.accordian.forEach((acc: Accordian) => {
       return acc.PluginList.forEach((plugin: Plugin) => {
@@ -61,6 +92,12 @@ export class BannerComponent implements OnInit {
       });
     });
   }
+
+
+  /**
+   * Function saves current banner
+   * @returns void
+   */
 
   saveSettings(): void {
     this.showAccordianIndex = -1;
