@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "sp-task": {
+      "hosting": {
+        "sp-task": [
+          "sp-task"
+        ]
+      }
+    }
+  }
+}
