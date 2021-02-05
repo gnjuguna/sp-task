@@ -66,6 +66,7 @@ export class BannerComponent implements OnInit {
     this.showAccordianIndex = -1;
     this.hideCustomizePanel = true;
     setTimeout(() => {
+      console.log(this.bannerData);
       this.showSavingSuccessMsg = true;
     }, 2000);
     this.showSavingSuccessMsg = false;
