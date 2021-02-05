@@ -4,6 +4,7 @@ import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { ApiService } from '../shared/services/api.service';
 
 import { BannerComponent } from '../shared/modals/banner/banner.component';
+import { Banner } from '../shared/models/banner.model';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -11,7 +12,7 @@ import { BannerComponent } from '../shared/modals/banner/banner.component';
 })
 export class HomeComponent implements OnInit, AfterViewInit {
 
-  bannerData: any;
+  bannerData: Banner = new Banner();
 
   bsModalRef: BsModalRef | undefined;
 
@@ -26,7 +27,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.apiService.getBanner().subscribe((res: any) => {
+    this.apiService.getBanner().subscribe((res: Banner) => {
 
       setTimeout(() => this.openModal(res), 2000);
 
@@ -34,7 +35,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
 
-  openModal(bannerData: any): any {
+  openModal(bannerData: Banner): any {
     const initialState = {
       bannerData
     };

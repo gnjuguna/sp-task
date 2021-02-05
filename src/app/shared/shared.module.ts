@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { BsModalRef, ModalModule } from 'ngx-bootstrap/modal';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
@@ -12,6 +13,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { BannerComponent } from './modals/banner/banner.component';
 
 
+
 const bootstrapModules = [
   ModalModule.forRoot(),
   CollapseModule.forRoot()
@@ -21,6 +23,7 @@ const bootstrapModules = [
   imports: [
     CommonModule,
     HttpClientModule,
+    FormsModule,
     ...bootstrapModules
   ],
   exports: [
