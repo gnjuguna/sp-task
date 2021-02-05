@@ -9,6 +9,9 @@ module.exports = {
         '2xs': '.65rem',
         '3xs': '.50rem',
         '4xs': '.40rem'
+      },
+      colors: {
+        'sp-green': '#39cb74',
       }
     },
   },

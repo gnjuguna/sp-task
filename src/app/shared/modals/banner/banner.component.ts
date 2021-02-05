@@ -42,9 +42,13 @@ export class BannerComponent implements OnInit {
     return this.bannerData.accordian[index].PluginList.length === enabledPlugins.length;
   }
 
-  enableAllAccordianPlugins(index: number): void {
+  enableAllAccordianPlugins(event: any, index: number): void {
     this.bannerData.accordian[index].PluginList.forEach((plugin: Plugin) => {
-      return plugin.BlockingEnabled = true;
+      if (event.target.checked) {
+        return plugin.BlockingEnabled = true;
+      } else {
+        return plugin.BlockingEnabled = false;
+      }
     });
   }
 

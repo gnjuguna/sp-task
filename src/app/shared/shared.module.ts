@@ -17,7 +17,7 @@ import { BannerComponent } from './modals/banner/banner.component';
 const bootstrapModules = [
   ModalModule.forRoot(),
   CollapseModule.forRoot()
-]
+];
 @NgModule({
   declarations: [HeaderComponent, FooterComponent, BannerComponent],
   imports: [

@@ -30,7 +30,7 @@
             <div class="flex flex-row justify-between pt-3 text-2xs md:text-xs">
                 <div class="flex flex-row space-x-2">
                     <button
-                        class="px-3 py-2 font-semibold text-white bg-green-500 rounded-sm md:px-4 hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-opacity-50"
+                        class="px-3 py-2 font-semibold text-white rounded-sm bg-sp-green md:px-4 hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-opacity-50"
                         (click)="enableAllPlugins()">
                         Accept All
                     </button>
@@ -66,7 +66,7 @@
                     <div
                         class="relative inline-block w-6 mr-2 align-middle transition duration-200 ease-in select-none">
                         <input type="checkbox" [checked]="allPluginsSelected(i)" [name]="acc?.CategoyHeading"
-                            (change)="enableAllAccordianPlugins(i)" [id]="acc?.CategoyHeading"
+                            (change)="enableAllAccordianPlugins($event,i)" [id]="acc?.CategoyHeading"
                             class="absolute block w-2 h-2 bg-white border-4 rounded-full appearance-none cursor-pointer toggle-checkbox focus:outline-none hover:outline-none focus:ring-0 focus:border-0" />
                         <label [for]="acc?.CategoyHeading"
                             class="block h-2 overflow-hidden bg-gray-300 rounded-full cursor-pointer toggle-label hover:outline-none focus:ring-0 focus:outline-none focus:border-0"></label>
