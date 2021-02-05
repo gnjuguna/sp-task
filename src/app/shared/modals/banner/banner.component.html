@@ -1,5 +1,5 @@
 <div class="h-auto bg-gray-100 rounded">
-    <div class="p-3 bg-white shadow-md md:pb-4">
+    <div class="p-3 bg-white shadow-md sm:p-1 md:px-3 md:py-4 md:pb-4">
         <div class="flex justify-end p-2">
             <button class="text-gray-400" (click)="bsModalRef.hide()">
                 <svg class="w-3 h-3 stroke-current stroke-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -40,18 +40,18 @@
             <div class="flex flex-row justify-between pt-3 text-2xs md:text-xs">
                 <div class="flex flex-row space-x-2">
                     <button
-                        class="px-3 py-1 font-semibold text-white rounded-sm bg-sp-green md:px-4 hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-opacity-50"
+                        class="px-2 py-1 font-semibold text-white rounded-sm md:px-3 bg-sp-green hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-opacity-50"
                         (click)="enableAllPlugins()">
                         Accept All
                     </button>
                     <button
-                        class="px-3 py-1 text-gray-400 border border-gray-400 rounded-sm md:px-4 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-50"
+                        class="px-2 py-1 text-gray-400 border border-gray-400 rounded-sm md:px-3 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-50"
                         (click)="saveSettings()">
                         Save Settings
                     </button>
                 </div>
                 <button
-                    class="flex flex-row justify-end px-3 py-2 text-xs text-gray-400 md:px-4 hover:bg-gray-50 focus:outline-none focus:ring-1 focus:ring-gray-50 focus:ring-opacity-50"
+                    class="flex flex-row justify-end px-2 py-2 text-xs text-gray-400 md:px-3 hover:bg-gray-50 focus:outline-none focus:ring-1 focus:ring-gray-50 focus:ring-opacity-50"
                     (click)="showCustomizePanel()">
                     <div class="flex flex-row items-center space-x-2">
                         <p>Customize</p>
@@ -71,7 +71,7 @@
             </div>
         </div>
     </div>
-    <div [collapse]="hideCustomizePanel" class="p-4 md:p-4">
+    <div [collapse]="hideCustomizePanel" class="p-2 md:p-4">
         <div class="px-3 py-1 my-2 bg-white rounded-sm shadow-sm md:px-4 md:py-2"
             *ngFor="let acc of bannerData.accordian; let i = index">
             <div class="flex flex-row items-center justify-between space-x-2">
