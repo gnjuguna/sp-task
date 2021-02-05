@@ -119,7 +119,6 @@
                     <div class="flex flex-row text-gray-500" *ngFor="let plugin of acc.PluginList; let ind = index">
                         <p class="w-1/3">{{plugin?.ComplianceType}}</p>
                         <div class="w-1/3">
-                            {{acc.IsMandatory}}
                             <label [for]="plugin.ComplianceTypeID">
                                 <div class="switch">
                                     <input name="{{plugin.ComplianceTypeID}}" type="checkbox" class="sr-only"
