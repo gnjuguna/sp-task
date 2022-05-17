@@ -49,7 +49,7 @@
     "karma-jasmine-html-reporter": "^1.5.0",
     "ngx-build-plus": "^11.0.0",
     "ngx-tailwind": "^2.0.0",
-    "postcss": "^8.2.4",
+    "postcss": "^8.2.13",
     "postcss-import": "^14.0.0",
     "postcss-loader": "^4.2.0",
     "postcss-scss": "^3.0.4",
